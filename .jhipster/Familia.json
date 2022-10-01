@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20221001210925",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "familia",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "ativa",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "renda",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required", "max"],
+      "fieldValidateRulesMax": "7000"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Familia",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

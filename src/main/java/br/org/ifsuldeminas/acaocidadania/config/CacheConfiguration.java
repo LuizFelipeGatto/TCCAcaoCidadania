@@ -48,6 +48,11 @@ public class CacheConfiguration {
             createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.User.class.getName());
             createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.Authority.class.getName());
             createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.Familia.class.getName());
+            createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.CestaDescricao.class.getName());
+            createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.Unidade.class.getName());
+            createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.Doacao.class.getName());
+            createCache(cm, br.org.ifsuldeminas.acaocidadania.domain.Pessoa.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

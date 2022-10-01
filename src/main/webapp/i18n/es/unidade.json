@@ -1,0 +1,28 @@
+{
+  "acaoCidadaniaApp": {
+    "unidade": {
+      "home": {
+        "title": "Unidades",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Unidade",
+        "createOrEditLabel": "Crear o editar Unidade",
+        "notFound": "Ningún Unidades encontrado"
+      },
+      "created": "Un nuevo Unidade ha sido creado con el identificador {{ param }}",
+      "updated": "Un Unidade ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Unidade ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Unidade {{ id }}?"
+      },
+      "detail": {
+        "title": "Unidade"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "cep": "Cep",
+      "cidade": "Cidade",
+      "logradouro": "Logradouro",
+      "codigoIbge": "Codigo Ibge"
+    }
+  }
+}

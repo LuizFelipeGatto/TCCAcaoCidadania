@@ -1,0 +1,24 @@
+{
+  "acaoCidadaniaApp": {
+    "cestaDescricao": {
+      "home": {
+        "title": "Cesta Descricaos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cesta Descricao",
+        "createOrEditLabel": "Create or edit a Cesta Descricao",
+        "notFound": "No Cesta Descricaos found"
+      },
+      "created": "A new Cesta Descricao is created with identifier {{ param }}",
+      "updated": "A Cesta Descricao is updated with identifier {{ param }}",
+      "deleted": "A Cesta Descricao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cesta Descricao {{ id }}?"
+      },
+      "detail": {
+        "title": "Cesta Descricao"
+      },
+      "id": "ID",
+      "descricao": "Descricao"
+    }
+  }
+}

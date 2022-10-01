@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20221001210928",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "doacao",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Doacao",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "descricao",
+      "otherEntityName": "cestaDescricao",
+      "ownerSide": true,
+      "relationshipName": "cesta",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "nome",
+      "otherEntityName": "familia",
+      "ownerSide": true,
+      "relationshipName": "familia",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

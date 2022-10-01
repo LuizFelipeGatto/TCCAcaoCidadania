@@ -1,0 +1,26 @@
+{
+  "acaoCidadaniaApp": {
+    "familia": {
+      "home": {
+        "title": "Familias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Familia",
+        "createOrEditLabel": "Create or edit a Familia",
+        "notFound": "No Familias found"
+      },
+      "created": "A new Familia is created with identifier {{ param }}",
+      "updated": "A Familia is updated with identifier {{ param }}",
+      "deleted": "A Familia is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Familia {{ id }}?"
+      },
+      "detail": {
+        "title": "Familia"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "ativa": "Ativa",
+      "renda": "Renda"
+    }
+  }
+}

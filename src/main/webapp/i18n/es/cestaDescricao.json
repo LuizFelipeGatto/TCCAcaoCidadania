@@ -1,0 +1,24 @@
+{
+  "acaoCidadaniaApp": {
+    "cestaDescricao": {
+      "home": {
+        "title": "Cesta Descricaos",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Cesta Descricao",
+        "createOrEditLabel": "Crear o editar Cesta Descricao",
+        "notFound": "Ningún Cesta Descricaos encontrado"
+      },
+      "created": "Un nuevo Cesta Descricao ha sido creado con el identificador {{ param }}",
+      "updated": "Un Cesta Descricao ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Cesta Descricao ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Cesta Descricao {{ id }}?"
+      },
+      "detail": {
+        "title": "Cesta Descricao"
+      },
+      "id": "ID",
+      "descricao": "Descricao"
+    }
+  }
+}

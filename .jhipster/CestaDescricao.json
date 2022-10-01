@@ -1,0 +1,22 @@
+{
+  "applications": "*",
+  "changelogDate": "20221001210926",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "cesta_descricao",
+  "fields": [
+    {
+      "fieldName": "descricao",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "150"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CestaDescricao",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

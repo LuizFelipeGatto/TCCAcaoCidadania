@@ -1,0 +1,26 @@
+{
+  "acaoCidadaniaApp": {
+    "doacao": {
+      "home": {
+        "title": "Doacaos",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Doacao",
+        "createOrEditLabel": "Crear o editar Doacao",
+        "notFound": "Ningún Doacaos encontrado"
+      },
+      "created": "Un nuevo Doacao ha sido creado con el identificador {{ param }}",
+      "updated": "Un Doacao ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Doacao ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Doacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Doacao"
+      },
+      "id": "ID",
+      "data": "Data",
+      "cesta": "Cesta",
+      "familia": "Familia"
+    }
+  }
+}
