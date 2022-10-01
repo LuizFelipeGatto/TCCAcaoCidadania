@@ -1,0 +1,56 @@
+
+
+entity Familia {
+    nome String required maxlength(100)
+    ativa Boolean required
+    renda Double required max(7000)
+}
+
+entity CestaDescricao {
+    descricao String required maxlength(150)
+}
+
+entity Unidade {
+	nome String maxlength(150) required
+    cep String maxlength(20) required
+    cidade String maxlength(150) required
+    logradouro String required
+    codigoIbge String required
+}
+
+entity Doacao {
+    data LocalDate required
+}
+
+entity Pessoa {
+	nome String maxlength(255) required
+    cpf String maxlength(14) minlength(14) required
+    cidade String maxlength(150) required
+    logradouro String required
+    codigoIbge String required
+    celular String required
+    email String
+    beneficio Beneficio
+}
+
+enum Beneficio {
+    BOLSA_FAMILIA("Bolsa Familia"),
+    BPC("BPC"),
+    APOSENTADORIA("Aposentadoria"),
+    SEM_RENDA("Sem renda no momento")
+}
+
+relationship OneToOne {
+	Pessoa{unidade(nome)} to Unidade,
+    Pessoa{familia(nome)} to Familia
+}
+
+relationship OneToOne {
+	Doacao{cesta(descricao)} to CestaDescricao,
+    Doacao{familia(nome)} to Familia
+}
+
+paginate Pessoa, Familia, Unidade, CestaDescricao, Doacao with pagination
+
+service all with serviceImpl
+
