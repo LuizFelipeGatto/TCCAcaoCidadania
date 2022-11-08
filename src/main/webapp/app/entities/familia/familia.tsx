@@ -84,7 +84,7 @@ export const Familia = () => {
   return (
     <div>
       <h2 id="familia-heading" data-cy="FamiliaHeading">
-        <Translate contentKey="acaoCidadaniaApp.familia.home.title">Familias</Translate>
+        <Translate contentKey="acaoCidadaniaApp.familia.home.title">Famílias</Translate>
         <div className="d-flex justify-content-end">
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
@@ -92,8 +92,7 @@ export const Familia = () => {
           </Button>
           <Link to="/familia/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
             <FontAwesomeIcon icon="plus" />
-            &nbsp;
-            <Translate contentKey="acaoCidadaniaApp.familia.home.createLabel">Create new Familia</Translate>
+            &nbsp; Cadastrar
           </Link>
         </div>
       </h2>

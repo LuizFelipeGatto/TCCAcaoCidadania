@@ -4,13 +4,13 @@
       "home": {
         "title": "Unidades",
         "refreshListLabel": "Atualizar lista",
-        "createLabel": "Criar novo Unidade",
+        "createLabel": "Criar nova Unidade",
         "createOrEditLabel": "Criar ou editar Unidade",
-        "notFound": "Nenhum Unidade encontrado"
+        "notFound": "Nenhuma Unidade encontrada"
       },
-      "created": "Um novo Unidade foi criado com o identificador {{ param }}",
-      "updated": "Um Unidade foi atualizado com o identificador {{ param }}",
-      "deleted": "Um Unidade foi excluído com o identificador {{ param }}",
+      "created": "Uma nova Unidade foi criada com o identificador {{ param }}",
+      "updated": "Uma Unidade foi atualizada com o identificador {{ param }}",
+      "deleted": "Uma Unidade foi excluída com o identificador {{ param }}",
       "delete": {
         "question": "Tem certeza de que deseja excluir Unidade {{ id }}?"
       },

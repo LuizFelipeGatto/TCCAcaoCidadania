@@ -6,7 +6,7 @@ import { Navbar, Nav, NavbarToggler, Collapse } from 'reactstrap';
 import LoadingBar from 'react-redux-loading-bar';
 
 import { Home, Brand } from './header-components';
-import { AdminMenu, EntitiesMenu, AccountMenu, LocaleMenu } from '../menus';
+import { AdminMenu, EntitiesMenu, AccountMenu } from '../menus';
 import { useAppDispatch } from 'app/config/store';
 import { setLocale } from 'app/shared/reducers/locale';
 
@@ -30,14 +30,14 @@ const Header = (props: IHeaderProps) => {
     dispatch(setLocale(langKey));
   };
 
-  const renderDevRibbon = () =>
-    props.isInProduction === false ? (
-      <div className="ribbon dev">
-        <a href="">
-          <Translate contentKey={`global.ribbon.${props.ribbonEnv}`} />
-        </a>
-      </div>
-    ) : null;
+  // const renderDevRibbon = () =>
+  //   props.isInProduction === false ? (
+  //     <div className="ribbon dev">
+  //       <a href="">
+  //         <Translate contentKey={`global.ribbon.${props.ribbonEnv}`} />
+  //       </a>
+  //     </div>
+  //   ) : null;
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -45,17 +45,17 @@ const Header = (props: IHeaderProps) => {
 
   return (
     <div id="app-header">
-      {renderDevRibbon()}
+      {/* {renderDevRibbon()} */}
       <LoadingBar className="loading-bar" />
-      <Navbar data-cy="navbar" dark expand="md" fixed="top" className="bg-primary">
+      <Navbar data-cy="navbar" dark expand="lg" fixed="top" className="bg-primary">
         <NavbarToggler aria-label="Menu" onClick={toggleMenu} />
         <Brand />
         <Collapse isOpen={menuOpen} navbar>
           <Nav id="header-tabs" className="ms-auto" navbar>
             <Home />
-            {props.isAuthenticated && <EntitiesMenu />}
+            {/* {props.isAuthenticated && <EntitiesMenu />} */}
             {props.isAuthenticated && props.isAdmin && <AdminMenu showOpenAPI={props.isOpenAPIEnabled} />}
-            <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange} />
+            {/* <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange} /> */}
             <AccountMenu isAuthenticated={props.isAuthenticated} />
           </Nav>
         </Collapse>

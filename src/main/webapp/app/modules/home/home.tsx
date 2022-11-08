@@ -4,6 +4,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert } from 'reactstrap';
+import { translate } from 'react-jhipster';
+import { EntitiesMenu } from '../../shared/layout/menus/entities';
 
 import { useAppSelector } from 'app/config/store';
 
@@ -12,12 +14,13 @@ export const Home = () => {
 
   return (
     <Row>
-      <Col md="3" className="pad">
+      {/* <Col md="3" className="pad">
         <span className="hipster rounded" />
-      </Col>
-      <Col md="9">
+      </Col> */}
+      {/* <span className="hipster rounded" /> */}
+      <Col md="12">
         <h2>
-          <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
+          <Translate contentKey="home.title">Citizenship Action</Translate>
         </h2>
         <p className="lead">
           <Translate contentKey="home.subtitle">This is your homepage</Translate>
@@ -29,6 +32,15 @@ export const Home = () => {
                 You are logged in as user {account.login}.
               </Translate>
             </Alert>
+            <div className="">
+              <EntitiesMenu
+                // icon="th-list"
+                // name={translate('global.menu.entities.main')}
+                // id="entity-menu"
+                data-cy="entity"
+                // style={{ maxHeight: '80vh', overflow: 'auto' }}
+              />
+            </div>
           </div>
         ) : (
           <div>
@@ -53,7 +65,7 @@ export const Home = () => {
             </Alert>
           </div>
         )}
-        <p>
+        {/* <p>
           <Translate contentKey="home.question">If you have any question on JHipster:</Translate>
         </p>
 
@@ -91,7 +103,7 @@ export const Home = () => {
             GitHub
           </a>
           !
-        </p>
+        </p> */}
       </Col>
     </Row>
   );
