@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IUnidade } from 'app/shared/model/unidade.model';
 import { getEntities } from './unidade.reducer';
+import '../styleCruds.css';
 
 export const Unidade = () => {
   const dispatch = useAppDispatch();
@@ -86,7 +87,7 @@ export const Unidade = () => {
       <h2 id="unidade-heading" data-cy="UnidadeHeading">
         <Translate contentKey="acaoCidadaniaApp.unidade.home.title">Unidades</Translate>
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2 botaoAtualizar" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="acaoCidadaniaApp.unidade.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -118,7 +119,7 @@ export const Unidade = () => {
                   <Translate contentKey="acaoCidadaniaApp.unidade.logradouro">Logradouro</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('codigoIbge')}>
-                  <Translate contentKey="acaoCidadaniaApp.unidade.codigoIbge">Codigo Ibge</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="acaoCidadaniaApp.unidade.codigoIbge">Código Ibge</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -138,7 +139,14 @@ export const Unidade = () => {
                   <td>{unidade.codigoIbge}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`/unidade/${unidade.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                      <Button
+                        tag={Link}
+                        to={`/unidade/${unidade.id}`}
+                        color="gray"
+                        className="mx-1"
+                        size="sm"
+                        data-cy="entityDetailsButton"
+                      >
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
@@ -150,6 +158,7 @@ export const Unidade = () => {
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
+                        className="mx-1"
                       >
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">

@@ -6,7 +6,7 @@ import { NavDropdown } from './menu-components';
 const accountMenuItemsAuthenticated = () => (
   <>
     <MenuItem icon="wrench" to="/account/settings" data-cy="settings">
-      <Translate contentKey="global.menu.account.settings">Settings</Translate>
+      Configurações
     </MenuItem>
     <MenuItem icon="lock" to="/account/password" data-cy="passwordItem">
       <Translate contentKey="global.menu.account.password">Password</Translate>

@@ -2,20 +2,20 @@
   "acaoCidadaniaApp": {
     "familia": {
       "home": {
-        "title": "Familias",
+        "title": "Famílias",
         "refreshListLabel": "Atualizar lista",
-        "createLabel": "Criar novo Familia",
-        "createOrEditLabel": "Criar ou editar Familia",
-        "notFound": "Nenhum Familia encontrado"
+        "createLabel": "Criar nova Família",
+        "createOrEditLabel": "Criar ou editar Família",
+        "notFound": "Nenhuma Família encontrada"
       },
-      "created": "Um novo Familia foi criado com o identificador {{ param }}",
-      "updated": "Um Familia foi atualizado com o identificador {{ param }}",
-      "deleted": "Um Familia foi excluído com o identificador {{ param }}",
+      "created": "Uma nova Família foi criada com o identificador {{ param }}",
+      "updated": "Uma Família foi atualizada com o identificador {{ param }}",
+      "deleted": "Uma Família foi excluída com o identificador {{ param }}",
       "delete": {
-        "question": "Tem certeza de que deseja excluir Familia {{ id }}?"
+        "question": "Tem certeza de que deseja excluir Família {{ id }}?"
       },
       "detail": {
-        "title": "Familia"
+        "title": "Família"
       },
       "id": "ID",
       "nome": "Nome",

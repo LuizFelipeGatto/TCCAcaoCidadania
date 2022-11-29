@@ -1,0 +1,10 @@
+.botaoAtualizar {
+  background-color: rgba(220, 220, 221, 0.603);
+  border: none !important;
+  color: #000;
+}
+
+.botaoAtualizar:hover {
+  background-color: rgba(220, 220, 221, 0.2);
+  color: #000;
+}
