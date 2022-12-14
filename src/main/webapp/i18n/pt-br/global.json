@@ -143,6 +143,7 @@
     "idnull": "Identificador inválido",
     "idinvalid": "Invalid Id",
     "idnotfound": "ID cannot be found",
+    "notdoar": "Essa família não pode retirar cesta básica no momento, pois faz menos de 30 dias que retirou.",
     "file": {
       "could.not.extract": "Could not extract file",
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""

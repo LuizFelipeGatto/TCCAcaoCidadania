@@ -67,11 +67,11 @@ export const Home = () => {
               <hr className="my-3"></hr>
             </div>
             <section className="container">
-              <div className="row">
-                <div className="col-md-5">
-                  <img src="content/images/logoAcao.png" alt="Logo" />
+              <div className="row justify-content-around">
+                <div className="col-md-3 float-left">
+                  <img src="content/images/legalisSobre.png" alt="Logo" />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 float-right">
                   <h3 className="titleDois">
                     Olá, somos a <span className="font-weight-bold">Ação Cidadania!</span>
                   </h3>

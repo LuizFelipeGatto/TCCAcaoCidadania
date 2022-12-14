@@ -6,6 +6,7 @@ import br.org.ifsuldeminas.acaocidadania.service.DoacaoService;
 import br.org.ifsuldeminas.acaocidadania.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,6 +62,20 @@ public class DoacaoResource {
         if (doacao.getId() != null) {
             throw new BadRequestAlertException("A new doacao cannot already have an ID", ENTITY_NAME, "idexists");
         }
+
+        if (doacaoRepository.existsDoacao(LocalDate.now().minusDays(29), doacao.getFamilia().getId())) {
+            throw new BadRequestAlertException(
+                "Essa família não pode retirar cesta básica no momento, pois faz menos de 30 dias que retirou.",
+                ENTITY_NAME,
+                "notdoar"
+            );
+        }
+
+        doacao.setData(LocalDate.now());
+
+        //  if (doacao.getId() == null) {
+        //     throw new BadRequestAlertException("Essa família não pode retirar cesta básica no momento, pois faz menos de 30 dias que retirou.", ENTITY_NAME, "notdoar");
+        // }
         Doacao result = doacaoService.save(doacao);
         return ResponseEntity
             .created(new URI("/api/doacaos/" + result.getId()))

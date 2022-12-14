@@ -1,6 +1,7 @@
 package br.org.ifsuldeminas.acaocidadania.repository;
 
 import br.org.ifsuldeminas.acaocidadania.domain.Doacao;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
@@ -37,4 +38,13 @@ public interface DoacaoRepository extends JpaRepository<Doacao, Long> {
 
     @Query("select doacao from Doacao doacao left join fetch doacao.cesta left join fetch doacao.familia where doacao.id =:id")
     Optional<Doacao> findOneWithToOneRelationships(@Param("id") Long id);
+
+    @Query(
+        value = "SELECT EXISTS " +
+        "            (SELECT * FROM doacao d " +
+        "            WHERE d.familia_id = ?2 " +
+        "            AND d.data >= ?1)",
+        nativeQuery = true
+    )
+    boolean existsDoacao(LocalDate data, Long id);
 }
