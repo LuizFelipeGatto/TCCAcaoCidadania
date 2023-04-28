@@ -2,9 +2,10 @@ import React from 'react';
 import { translate } from 'react-jhipster';
 import { NavDropdown } from './menu-components';
 import EntitiesMenuItems from 'app/entities/menu';
+import { Card } from 'reactstrap';
 
 export const EntitiesMenu = () => (
-  <NavDropdown
+  <Card
     icon="th-list"
     name={translate('global.menu.entities.main')}
     id="entity-menu"
@@ -12,5 +13,5 @@ export const EntitiesMenu = () => (
     style={{ maxHeight: '80vh', overflow: 'auto' }}
   >
     <EntitiesMenuItems />
-  </NavDropdown>
+  </Card>
 );

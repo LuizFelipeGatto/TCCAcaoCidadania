@@ -6,7 +6,7 @@
   "entityTableName": "cesta_descricao",
   "fields": [
     {
-      "fieldName": "descricao",
+      "fieldName": "Descrição:",
       "fieldType": "String",
       "fieldValidateRules": ["required", "maxlength"],
       "fieldValidateRulesMaxlength": "150"

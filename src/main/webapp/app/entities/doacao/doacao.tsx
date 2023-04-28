@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IDoacao } from 'app/shared/model/doacao.model';
 import { getEntities } from './doacao.reducer';
+import '../styleCruds.css';
 
 export const Doacao = () => {
   const dispatch = useAppDispatch();
@@ -86,7 +87,7 @@ export const Doacao = () => {
       <h2 id="doacao-heading" data-cy="DoacaoHeading">
         <Translate contentKey="acaoCidadaniaApp.doacao.home.title">Doacaos</Translate>
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2 botaoAtualizar" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="acaoCidadaniaApp.doacao.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -112,7 +113,7 @@ export const Doacao = () => {
                   <Translate contentKey="acaoCidadaniaApp.doacao.cesta">Cesta</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  <Translate contentKey="acaoCidadaniaApp.doacao.familia">Familia</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="acaoCidadaniaApp.doacao.familia">Família</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -130,7 +131,7 @@ export const Doacao = () => {
                   <td>{doacao.familia ? <Link to={`/familia/${doacao.familia.id}`}>{doacao.familia.nome}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`/doacao/${doacao.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                      <Button tag={Link} to={`/doacao/${doacao.id}`} className="mx-1" color="gray" size="sm" data-cy="entityDetailsButton">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
@@ -142,6 +143,7 @@ export const Doacao = () => {
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
+                        className="mx-1"
                       >
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">

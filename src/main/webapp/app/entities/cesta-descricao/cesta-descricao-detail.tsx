@@ -34,7 +34,7 @@ export const CestaDescricaoDetail = () => {
           <dd>{cestaDescricaoEntity.id}</dd>
           <dt>
             <span id="descricao">
-              <Translate contentKey="acaoCidadaniaApp.cestaDescricao.descricao">Descricao</Translate>
+              <Translate contentKey="acaoCidadaniaApp.cestaDescricao.descricao">Descrição</Translate>
             </span>
           </dt>
           <dd>{cestaDescricaoEntity.descricao}</dd>

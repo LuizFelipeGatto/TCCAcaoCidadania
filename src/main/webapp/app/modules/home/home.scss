@@ -5,6 +5,39 @@ Main page styles
   display: inline-block;
   width: 100%;
   height: 497px;
-  background: url('../../../content/images/jhipster_family_member_3.svg') no-repeat center top;
   background-size: contain;
+}
+
+.buttonStyle {
+  top: 26px;
+  left: 1419px;
+  width: 124px;
+  height: 46px;
+  padding: 10px;
+  text-align: center;
+  color: #fff !important;
+  background: transparent linear-gradient(84deg, var(--unnamed-color-c51d25) 0%, #a0181f 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(84deg, #c51d25 0%, #a0181f 100%) 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  font-size: 18px;
+}
+
+.buttonStyleOutline {
+  top: 26px;
+  left: 1419px;
+  width: 124px;
+  height: 46px;
+  padding: 10px;
+  color: #a0181f !important;
+  background-color: #fff;
+  border: 2px solid #a0181f;
+  border-radius: 5px;
+  opacity: 1;
+  font-family: 'Nunito-dois';
+  font-size: 20px;
+}
+
+.buttonStyle::hover {
+  color: #000;
 }

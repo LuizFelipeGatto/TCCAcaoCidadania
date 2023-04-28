@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IPessoa } from 'app/shared/model/pessoa.model';
 import { getEntities } from './pessoa.reducer';
+import '../styleCruds.css';
 
 export const Pessoa = () => {
   const dispatch = useAppDispatch();
@@ -86,7 +87,7 @@ export const Pessoa = () => {
       <h2 id="pessoa-heading" data-cy="PessoaHeading">
         <Translate contentKey="acaoCidadaniaApp.pessoa.home.title">Pessoas</Translate>
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2 botaoAtualizar" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="acaoCidadaniaApp.pessoa.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -127,13 +128,13 @@ export const Pessoa = () => {
                   <Translate contentKey="acaoCidadaniaApp.pessoa.email">Email</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('beneficio')}>
-                  <Translate contentKey="acaoCidadaniaApp.pessoa.beneficio">Beneficio</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="acaoCidadaniaApp.pessoa.beneficio">Benefício</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
                   <Translate contentKey="acaoCidadaniaApp.pessoa.unidade">Unidade</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  <Translate contentKey="acaoCidadaniaApp.pessoa.familia">Familia</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="acaoCidadaniaApp.pessoa.familia">Família</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -160,7 +161,7 @@ export const Pessoa = () => {
                   <td>{pessoa.familia ? <Link to={`/familia/${pessoa.familia.id}`}>{pessoa.familia.nome}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`/pessoa/${pessoa.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                      <Button tag={Link} to={`/pessoa/${pessoa.id}`} color="gray" size="sm" className="mx-1" data-cy="entityDetailsButton">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
@@ -172,6 +173,7 @@ export const Pessoa = () => {
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
+                        className="mx-1"
                       >
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">

@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IFamilia } from 'app/shared/model/familia.model';
 import { getEntities } from './familia.reducer';
+import '../styleCruds.css';
 
 export const Familia = () => {
   const dispatch = useAppDispatch();
@@ -84,16 +85,15 @@ export const Familia = () => {
   return (
     <div>
       <h2 id="familia-heading" data-cy="FamiliaHeading">
-        <Translate contentKey="acaoCidadaniaApp.familia.home.title">Familias</Translate>
+        <Translate contentKey="acaoCidadaniaApp.familia.home.title">Famílias</Translate>
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2 botaoAtualizar" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="acaoCidadaniaApp.familia.home.refreshListLabel">Refresh List</Translate>
           </Button>
           <Link to="/familia/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
             <FontAwesomeIcon icon="plus" />
-            &nbsp;
-            <Translate contentKey="acaoCidadaniaApp.familia.home.createLabel">Create new Familia</Translate>
+            &nbsp; Cadastrar
           </Link>
         </div>
       </h2>
@@ -130,7 +130,14 @@ export const Familia = () => {
                   <td>{familia.renda}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`/familia/${familia.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                      <Button
+                        tag={Link}
+                        to={`/familia/${familia.id}`}
+                        color="gray"
+                        className="mx-1"
+                        size="sm"
+                        data-cy="entityDetailsButton"
+                      >
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
@@ -142,6 +149,7 @@ export const Familia = () => {
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
+                        className="mx-1"
                       >
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">

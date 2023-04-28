@@ -46,22 +46,22 @@ Navbar styles
   padding-left: 0;
 }
 
-.navbar-version {
-  font-size: 10px;
-  color: $header-color-secondary;
-  padding: 0 0 0 10px;
-}
+// .navbar-version {
+//   font-size: 10px;
+//   color: $header-color-secondary;
+//   padding: 0 0 0 10px;
+// }
 
 .brand-logo {
   &:hover {
     text-decoration: none;
   }
   .brand-icon {
-    height: 35px;
+    height: 65px;
     width: auto;
     display: inline-block;
     img {
-      height: 45px;
+      height: 65px;
     }
   }
 }
@@ -81,4 +81,8 @@ Navbar styles
   position: absolute;
   top: 0px;
   z-index: 1031;
+}
+
+.headerLayout {
+  background-color: #a0181f;
 }

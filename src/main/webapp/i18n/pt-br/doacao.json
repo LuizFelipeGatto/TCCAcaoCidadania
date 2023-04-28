@@ -2,17 +2,17 @@
   "acaoCidadaniaApp": {
     "doacao": {
       "home": {
-        "title": "Doacaos",
+        "title": "Doações",
         "refreshListLabel": "Atualizar lista",
-        "createLabel": "Criar novo Doacao",
-        "createOrEditLabel": "Criar ou editar Doacao",
-        "notFound": "Nenhum Doacao encontrado"
+        "createLabel": "Criar nova Doação",
+        "createOrEditLabel": "Criar ou editar Doação",
+        "notFound": "Nenhuma Doação encontrado"
       },
-      "created": "Um novo Doacao foi criado com o identificador {{ param }}",
-      "updated": "Um Doacao foi atualizado com o identificador {{ param }}",
-      "deleted": "Um Doacao foi excluído com o identificador {{ param }}",
+      "created": "Uma nova Doação foi criada com o identificador {{ param }}",
+      "updated": "Uma Doação foi atualizada com o identificador {{ param }}",
+      "deleted": "Uma Doação foi excluída com o identificador {{ param }}",
       "delete": {
-        "question": "Tem certeza de que deseja excluir Doacao {{ id }}?"
+        "question": "Tem certeza de que deseja excluir Doação {{ id }}?"
       },
       "detail": {
         "title": "Doacao"

@@ -4,13 +4,13 @@
   "dto": "no",
   "embedded": false,
   "entityTableName": "doacao",
-  "fields": [
-    {
-      "fieldName": "data",
-      "fieldType": "LocalDate",
-      "fieldValidateRules": ["required"]
-    }
-  ],
+  // "fields": [
+  //   {
+  //     "fieldName": "data",
+  //     "fieldType": "LocalDate",
+  //     "fieldValidateRules": ["required"]
+  //   }
+  // ],
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
   "name": "Doacao",

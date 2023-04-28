@@ -100,7 +100,7 @@ export const DoacaoUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
-              <ValidatedField
+              {/* <ValidatedField
                 label={translate('acaoCidadaniaApp.doacao.data')}
                 id="doacao-data"
                 name="data"
@@ -109,7 +109,7 @@ export const DoacaoUpdate = () => {
                 validate={{
                   required: { value: true, message: translate('entity.validation.required') },
                 }}
-              />
+              /> */}
               <ValidatedField
                 id="doacao-cesta"
                 name="cesta"

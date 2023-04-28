@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { ICestaDescricao } from 'app/shared/model/cesta-descricao.model';
 import { getEntities } from './cesta-descricao.reducer';
+import '../styleCruds.css';
 
 export const CestaDescricao = () => {
   const dispatch = useAppDispatch();
@@ -86,7 +87,7 @@ export const CestaDescricao = () => {
       <h2 id="cesta-descricao-heading" data-cy="CestaDescricaoHeading">
         <Translate contentKey="acaoCidadaniaApp.cestaDescricao.home.title">Cesta Descricaos</Translate>
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2 botaoAtualizar" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="acaoCidadaniaApp.cestaDescricao.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -106,7 +107,7 @@ export const CestaDescricao = () => {
                   <Translate contentKey="acaoCidadaniaApp.cestaDescricao.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('descricao')}>
-                  <Translate contentKey="acaoCidadaniaApp.cestaDescricao.descricao">Descricao</Translate> <FontAwesomeIcon icon="sort" />
+                  Descrição <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -122,7 +123,14 @@ export const CestaDescricao = () => {
                   <td>{cestaDescricao.descricao}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`/cesta-descricao/${cestaDescricao.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                      <Button
+                        tag={Link}
+                        to={`/cesta-descricao/${cestaDescricao.id}`}
+                        className="mx-1"
+                        color="gray"
+                        size="sm"
+                        data-cy="entityDetailsButton"
+                      >
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
@@ -134,6 +142,7 @@ export const CestaDescricao = () => {
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
+                        className="mx-1"
                       >
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">

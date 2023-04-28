@@ -24,7 +24,6 @@ public class Doacao implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @NotNull
     @Column(name = "data", nullable = false)
     private LocalDate data;
 
